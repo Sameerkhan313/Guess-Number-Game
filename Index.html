@@ -7,14 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Number Guessing Game</h1>
-        <p>Guess a number between 1 and 20:</p>
-        <input type="number" id="guessField">
-        <button onclick="checkGuess()">Submit Guess</button>
-        <p id="message"></p>
-    </div>
-
+        <div class="upperSection">
+            <button id="againBtn">Again!</button>
+            <p>(Between 1 and 20)</p>
+        </div>
+        <div class="container">
+            <h1>Guess My Number !</h1>
+            <p id="line"></p>
+            <p id="questionMark">?</p>
+            <!-- <p>Guess a number between 1 and 20:</p> -->
+             <div class="lowerSection">
+                 <div class="checkSection">
+                     <input type="number" id="guessField">
+                     <button id="checkBtn" onclick="checkGuess()">Check!</button>
+                    </div>
+                    <p id="message">Start Guessing...</p>
+                </div>
+        </div>
+        
     <script src="app.js"></script>
 </body>
 </html>

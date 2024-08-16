@@ -18,6 +18,8 @@ function checkGuess() {
     if (userGuess === randomNumber) {
         message.innerHTML = `Congratulations! You guessed the number ${randomNumber} correctly in ${guesses} guesses.`;
         message.style.color = 'green';
+        let questionMark = document.querySelector("#questionMark")
+        questionMark.textContent = randomNumber
         disableInput();
     } else if (userGuess > randomNumber) {
         message.innerHTML = 'Too high. Try again.';
@@ -36,3 +38,9 @@ function disableInput() {
     document.getElementById('guessField').disabled = true;
     document.querySelector('button').disabled = true;
 }
+
+let againBtn = document.querySelector("#againBtn")
+againBtn.addEventListener("click", ()=>{
+    location.reload()
+    
+})
